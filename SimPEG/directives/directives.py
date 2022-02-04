@@ -1334,6 +1334,7 @@ class SaveIterationsGeoH5(InversionDirective):
     _label = None
     channels = [""]
     components = [""]
+    n_tiles = None
     data_type = {}
     _h5_object = None
     _transforms: list = []
@@ -1366,16 +1367,23 @@ class SaveIterationsGeoH5(InversionDirective):
 
     def stack_channels(self, dpred):
 
-        tile_stack = []
-        channels = []
-        n_c = 0
-        for pred in dpred:
-            n_c += 1
-            channels += [pred]
-            if n_c == len(self.channels):
-                tile_stack += [self.reshape(np.vstack(channels))]
-                n_c = 0
+        if isinstance(dpred, list):
+            n_stacks = len(dpred)
+            if n_stacks > 1:
+                tile_stack = []
                 channels = []
+                n_c = 0
+                for pred in dpred:
+                    n_c += 1
+                    channels += [pred]
+                    if n_c == n_stacks/self.n_tiles:
+                        tile_stack += [self.reshape(np.vstack(channels))]
+                        n_c = 0
+                        channels = []
+            else:
+                tile_stack = dpred
+        else:
+            raise ValueError("Input must be a list.")
 
         return np.dstack(tile_stack)
 
