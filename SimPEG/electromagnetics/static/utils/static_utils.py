@@ -3,9 +3,7 @@ from scipy.interpolate import LinearNDInterpolator, interp1d, griddata
 from scipy.spatial import cKDTree
 import discretize
 from discretize import TensorMesh
-import matplotlib.pyplot as plt
-import matplotlib as mpl
-from matplotlib import ticker
+
 import warnings
 
 from ....data import Data
@@ -23,8 +21,6 @@ from ....utils.io_utils import (
     read_dcip3d_ubc,
     write_dcip3d_ubc,
 )
-
-from ....utils.plot_utils import plot_1d_layer_model
 
 from ....utils.code_utils import deprecate_method
 
@@ -538,6 +534,11 @@ def plot_pseudosection(
         The axis object that holds the plot
 
     """
+
+    import matplotlib.pyplot as plt
+    import matplotlib as mpl
+    from matplotlib import ticker
+
     if "pcolorOpts" in kwargs:
         warnings.warn(
             "The pcolorOpts keyword has been deprecated. Please use "
@@ -1792,6 +1793,7 @@ def plot_layer(rho, mesh, **kwargs):
         " 0.17.0 of SimPEG",
         DeprecationWarning,
     )
+    from ....utils.plot_utils import plot_1d_layer_model
 
     return plot_1d_layer_model(mesh.hx, rho, z0=mesh.origin[0], **kwargs)
 

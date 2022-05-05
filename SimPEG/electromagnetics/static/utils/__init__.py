@@ -25,7 +25,6 @@ from .static_utils import (
     genTopography,
     closestPointsGrid,
     gen_3d_survey_from_2d_lines,
-    plot_1d_layer_model,
     plot_layer,
     plot_pseudoSection,
 )

@@ -2,7 +2,7 @@ from __future__ import print_function, annotations
 import json
 import properties
 import numpy as np
-import matplotlib.pyplot as plt
+
 import warnings
 import os
 import scipy.sparse as sp
@@ -1037,6 +1037,8 @@ class SaveOutputEveryIteration(SaveEveryIteration):
         plot_smooth=False,
     ):
 
+        import matplotlib.pyplot as plt
+
         self.target_misfit = self.invProb.dmisfit.simulation.survey.nD / 2.0
         self.i_target = None
 
@@ -1091,6 +1093,8 @@ class SaveOutputEveryIteration(SaveEveryIteration):
             fig.savefig(fname, dpi=dpi)
 
     def plot_tikhonov_curves(self, fname=None, dpi=200):
+
+        import matplotlib.pyplot as plt
 
         self.target_misfit = self.invProb.dmisfit.simulation.survey.nD / 2.0
         self.i_target = None

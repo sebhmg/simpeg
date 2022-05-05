@@ -1,7 +1,7 @@
 from .... import maps, utils
 import discretize
 from discretize.utils import mesh_builder_xyz, refine_tree_xyz, mkvc
-from ....electromagnetics import resistivity as dc
+from ....electromagnetics.static import resistivity as dc
 from ....electromagnetics.static.utils import StaticUtils as dcutils
 from pymatsolver import Pardiso as Solver
 import numpy as np

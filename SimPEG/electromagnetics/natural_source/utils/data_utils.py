@@ -2,7 +2,6 @@ from __future__ import print_function
 from __future__ import absolute_import
 from __future__ import division
 
-import matplotlib.pyplot as plt
 import numpy as np
 import numpy.lib.recfunctions as recFunc
 from scipy.constants import mu_0
@@ -347,6 +346,8 @@ def makeAnalyticSolution(mesh, model, elev, freqs):
 
 def plotMT1DModelData(problem, models, symList=None):
 
+    import matplotlib.pyplot as plt
+
     # Setup the figure
     fontSize = 15
 
@@ -442,6 +443,10 @@ def plotImpAppRes(dataArrays, plotLoc, textStr=[]):
     """
     Plots amplitude impedance and phase
     """
+
+
+    import matplotlib.pyplot as plt
+
     # Make the figure and axes
     fig, axT = plt.subplots(2, 2, sharex=True)
     axes = axT.ravel()

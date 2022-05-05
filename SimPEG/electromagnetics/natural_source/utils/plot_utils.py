@@ -2,7 +2,6 @@ from __future__ import print_function
 from __future__ import absolute_import
 from __future__ import division
 
-import matplotlib.pyplot as plt
 import numpy as np
 from scipy.constants import mu_0
 
@@ -52,6 +51,8 @@ class BaseDataNSEMPlots(properties.HasProperties):
     NSEM data.
 
     """
+
+    import matplotlib.pyplot as plt
 
     fig = properties.Instance("Figure plotting", plt.Figure, required=False)
     axes = properties.List(
@@ -104,6 +105,8 @@ class TipperAmplitudeStationPlot(BaseDataNSEMPlots):
         """
         Setup a station data plot figure.
         """
+        import matplotlib.pyplot as plt
+
         self.fig, axes_temp = plt.subplots(1, 2, sharex=True)
         self.axes = axes_temp.ravel().tolist()
         self.fig.set_size_inches((13.5, 4.0))
@@ -193,6 +196,8 @@ class ApparentResPhsStationPlot(BaseDataNSEMPlots):
         """
         Setup a station data plot figure.
         """
+        import matplotlib.pyplot as plt
+
         self.fig, axes_temp = plt.subplots(2, 2, sharex=True)
         self.axes = axes_temp.ravel().tolist()
         self.fig.set_size_inches((13.5, 7.0))
@@ -337,6 +342,9 @@ class DataNSEMPlotMethods(object):
         :type comp_plot_dict: dict
 
         """
+
+        import matplotlib.pyplot as plt
+
         if ax is None:
             fig, ax = plt.subplots(1, 1)
             ax.invert_xaxis()
@@ -385,6 +393,9 @@ class DataNSEMPlotMethods(object):
             for matplotlib.plot settings
         :type comp_plot_dict: dict
         """
+
+        import matplotlib.pyplot as plt
+
         if ax is None:
             fig, ax = plt.subplots(1, 1)
             ax.invert_xaxis()
@@ -432,6 +443,9 @@ class DataNSEMPlotMethods(object):
             for matplotlib.plot
         :type comp_plot_dict: dict
         """
+
+        import matplotlib.pyplot as plt
+
         if ax is None:
             fig, ax = plt.subplots(1, 1)
             ax.invert_xaxis()
@@ -480,6 +494,9 @@ class DataNSEMPlotMethods(object):
             for matplotlib.plot
         :type comp_plot_dict: dict
         """
+
+        import matplotlib.pyplot as plt
+
         if ax is None:
             fig, ax = plt.subplots(1, 1)
             ax.invert_xaxis()
@@ -512,6 +529,9 @@ class DataNSEMPlotMethods(object):
         :type ax: :class:`axes <matplotlib.axes.Axes>`
 
         """
+
+        import matplotlib.pyplot as plt
+
         # Default plot dict
         default_dict = {"marker": "+", "c": "k", "ms": 10, "ls": "None", "zorder": 4}
 
@@ -553,6 +573,8 @@ class DataNSEMPlotMethods(object):
 
         """
 
+        import matplotlib.pyplot as plt
+
         # Sort the axes
         if ax is None:
             fig, ax = plt.subplots(1, 1)
@@ -577,6 +599,8 @@ class DataNSEMPlotMethods(object):
         :param matplotlib.lines.Line2D keyword_arguments plot_kwargs:
 
         """
+
+        import matplotlib.pyplot as plt
 
         # Sort the axes
         if ax is None:
@@ -604,6 +628,8 @@ class DataNSEMPlotMethods(object):
         :param matplotlib.lines.Line2D keyword_arguments plot_kwargs:
 
         """
+
+        import matplotlib.pyplot as plt
 
         # Sort the axes
         if ax is None:

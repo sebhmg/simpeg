@@ -56,7 +56,6 @@ from . import io_utils
 from .coord_utils import rotatePointsFromNormals, rotationMatrixFromNormals
 
 from .model_utils import surface2ind_topo, tile_locations, depth_weighting
-from .plot_utils import plot2Ddata, plotLayer, plot_1d_layer_model
 
 from .io_utils import download
 from .pgi_utils import (

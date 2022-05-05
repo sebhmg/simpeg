@@ -1,7 +1,5 @@
 import numpy as np
-import pandas as pd
-import matplotlib.pyplot as plt
-import matplotlib
+
 import properties
 import warnings
 
@@ -10,8 +8,8 @@ from discretize.base import BaseMesh
 from discretize.utils import refine_tree_xyz, mkvc, meshTensor
 
 from ....data import Data
-from ....utils import sdiag, uniqueRows, surface2ind_topo, plot2Ddata
-from ..utils import geometric_factor
+from ....utils import sdiag, uniqueRows, surface2ind_topo
+
 from . import sources as Src
 from . import receivers as Rx
 from .survey import Survey
@@ -297,6 +295,7 @@ class IO(properties.HasProperties):
         Compute geometric factor, G, using locational informaition
         in survey object
         """
+        from ..utils import geometric_factor
         G = geometric_factor(survey, space_type=self.space_type)
         return G
 
@@ -718,6 +717,8 @@ class IO(properties.HasProperties):
         """
         Plot 2D pseudo-section for DC-IP data
         """
+        import matplotlib.pyplot as plt
+        import matplotlib
         matplotlib.rcParams["font.size"] = 12
 
         if ax is None:
@@ -770,6 +771,7 @@ class IO(properties.HasProperties):
         if label is None:
             label = label_tmp
 
+        from ....utils.plot_utils import plot2Ddata
         out = plot2Ddata(
             grids,
             val,
@@ -870,6 +872,7 @@ class IO(properties.HasProperties):
         return survey
 
     def write_to_csv(self, fname, dobs, standard_deviation=None, **kwargs):
+        import pandas as pd
         uncert = kwargs.pop("uncertainty", None)
         if uncert is not None:
             warnings.warn(
@@ -907,6 +910,7 @@ class IO(properties.HasProperties):
         df.to_csv(fname)
 
     def read_dc_data_csv(self, fname, dim=2):
+        import pandas as pd
         df = pd.read_csv(fname)
         if dim == 2:
             a_locations = df[["Ax", "Az"]].values
@@ -942,6 +946,7 @@ class IO(properties.HasProperties):
         return survey
 
     def read_topo_csv(self, fname, dim=2):
+        import pandas as pd
         if dim == 2:
             df = pd.read_csv(fname)
             topo = df[["X", "Z"]].values
