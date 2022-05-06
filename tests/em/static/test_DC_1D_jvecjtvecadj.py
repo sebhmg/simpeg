@@ -12,7 +12,7 @@ from SimPEG import (
     tests,
 )
 from SimPEG.utils import mkvc
-from SimPEG.electromagnetics import resistivity as dc
+from SimPEG.electromagnetics.static import resistivity as dc
 
 np.random.seed(40)
 

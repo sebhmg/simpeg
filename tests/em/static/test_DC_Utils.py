@@ -6,7 +6,7 @@ import unittest
 import numpy as np
 import discretize
 
-from SimPEG.electromagnetics import resistivity as dc
+from SimPEG.electromagnetics.static import resistivity as dc
 from SimPEG.electromagnetics.static import utils
 from SimPEG import maps, mkvc
 from SimPEG.utils import io_utils

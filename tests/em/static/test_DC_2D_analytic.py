@@ -4,7 +4,7 @@ import unittest
 from discretize import TensorMesh
 
 from SimPEG import utils, SolverLU
-from SimPEG.electromagnetics import resistivity as dc
+from SimPEG.electromagnetics.static import resistivity as dc
 from SimPEG.electromagnetics import analytics
 
 

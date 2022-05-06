@@ -1,7 +1,7 @@
 # import matplotlib
 # matplotlib.use('Agg')
 
-from SimPEG.electromagnetics import resistivity as dc
+from SimPEG.electromagnetics.static import resistivity as dc
 from SimPEG.electromagnetics.static import utils
 import matplotlib.pyplot as plt
 import numpy as np

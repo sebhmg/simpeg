@@ -5,7 +5,7 @@ from __future__ import print_function
 import unittest
 import numpy as np
 
-from SimPEG.electromagnetics import resistivity as dc
+from SimPEG.electromagnetics.static import resistivity as dc
 from SimPEG.electromagnetics.static import utils
 from SimPEG import maps, mkvc, data
 from SimPEG.utils.io_utils import io_utils_electromagnetics as io_utils

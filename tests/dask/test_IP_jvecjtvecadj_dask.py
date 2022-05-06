@@ -12,8 +12,8 @@ from SimPEG import inversion
 from SimPEG import inverse_problem
 from SimPEG import tests
 
-from SimPEG.electromagnetics import resistivity as dc
-from SimPEG.electromagnetics import induced_polarization as ip
+from SimPEG.electromagnetics.static import resistivity as dc
+from SimPEG.electromagnetics.static import induced_polarization as ip
 import shutil
 
 np.random.seed(30)

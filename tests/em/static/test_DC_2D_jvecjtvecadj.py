@@ -12,7 +12,7 @@ from SimPEG import (
     inversion,
     inverse_problem,
 )
-from SimPEG.electromagnetics import resistivity as dc
+from SimPEG.electromagnetics.static import resistivity as dc
 
 try:
     from pymatsolver import Pardiso as Solver

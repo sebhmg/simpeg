@@ -4,7 +4,7 @@ import unittest
 from discretize import TensorMesh
 from SimPEG import utils
 import numpy as np
-from SimPEG.electromagnetics import resistivity as dc
+from SimPEG.electromagnetics.static import resistivity as dc
 
 try:
     from pymatsolver import Pardiso as Solver

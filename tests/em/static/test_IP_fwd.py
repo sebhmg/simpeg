@@ -5,8 +5,8 @@ import numpy as np
 import discretize
 
 from SimPEG import utils, maps
-from SimPEG.electromagnetics import resistivity as dc
-from SimPEG.electromagnetics import induced_polarization as ip
+from SimPEG.electromagnetics.static import resistivity as dc
+from SimPEG.electromagnetics.static import induced_polarization as ip
 
 try:
     from pymatsolver import Pardiso as Solver

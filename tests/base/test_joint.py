@@ -16,7 +16,7 @@ from SimPEG import (
     directives,
     inversion,
 )
-from SimPEG.electromagnetics import resistivity as DC
+from SimPEG.electromagnetics.static import resistivity as DC
 
 np.random.seed(82)
 

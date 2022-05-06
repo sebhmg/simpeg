@@ -13,7 +13,7 @@ from SimPEG import (
     tests,
 )
 import numpy as np
-from SimPEG.electromagnetics import spectral_induced_polarization as sip
+from SimPEG.electromagnetics.static import spectral_induced_polarization as sip
 
 try:
     from pymatsolver import Pardiso as Solver

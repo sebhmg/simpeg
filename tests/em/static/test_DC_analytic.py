@@ -4,7 +4,7 @@ import discretize
 
 from SimPEG import utils
 import numpy as np
-from SimPEG.electromagnetics import resistivity as dc
+from SimPEG.electromagnetics.static import resistivity as dc
 from SimPEG.electromagnetics import analytics
 
 try:
