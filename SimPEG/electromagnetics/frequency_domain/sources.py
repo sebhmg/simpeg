@@ -3,7 +3,7 @@ import numpy as np
 from scipy.constants import mu_0
 import warnings
 
-from geoana.em.static import MagneticDipoleWholeSpace, CircularLoopWholeSpace
+from geoana.em.static.wholespace import MagneticDipoleWholeSpace, CircularLoopWholeSpace
 
 from ...props import LocationVector
 from ...utils import mkvc, Zero
