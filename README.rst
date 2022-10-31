@@ -102,11 +102,11 @@ to "extras" and declared optional. To use it outside of ``geoapps``, install it 
 .. _pip documentation: https://pip.pypa.io/en/stable/reference/build-system/pyproject-toml/
 
 Install from a local clone
-------------------
+--------------------------
 pip install path/to/simpeg[regular]
 
 Install from a local clone in editable mode
------------------------------------
+-------------------------------------------
 pip install -e path/to/simpeg[regular]
 
 
