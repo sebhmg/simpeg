@@ -5,7 +5,7 @@
 
 [tool.poetry]
 name = "simpeg_archive"
-version = "0.9.1.dev5"
+version = "0.9.1.dev6"
 license = "MIT"
 description = "Mira fork of SimPEG: Simulation and Parameter Estimation in Geophysics"
 
