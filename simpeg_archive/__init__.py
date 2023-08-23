@@ -2,7 +2,7 @@ from __future__ import print_function
 from __future__ import absolute_import
 
 import discretize as Mesh
-from discretize import Tests
+from discretize import tests
 
 from . import Maps
 from . import Models
@@ -23,7 +23,7 @@ from .utils.SolverUtils import (
     _checkAccuracy, SolverWrapD, SolverWrapI,
     Solver, SolverCG, SolverDiag, SolverLU, SolverBiCG,
 )
-__version__   = '0.9.1.dev5+geoapps.0.9.0'
+__version__   = '0.11.0.dev6+geoapps.0.11.0'
 __author__    = 'SimPEG Team'
 __license__   = 'MIT'
 __copyright__ = '2013 - 2018, SimPEG Team, http://simpeg.xyz'

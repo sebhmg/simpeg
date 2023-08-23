@@ -429,7 +429,7 @@ class RegularizationMesh(Props.BaseSimPEG):
         if getattr(self, "_cellDiffxStencil", None) is None:
 
             self._cellDiffxStencil = (
-                self.Pafx.T * self.mesh._cellGradxStencil * self.Pac
+                self.Pafx.T * self.mesh.stencil_cell_gradient_x * self.Pac
             )
         return self._cellDiffxStencil
 
@@ -447,7 +447,7 @@ class RegularizationMesh(Props.BaseSimPEG):
         if getattr(self, "_cellDiffyStencil", None) is None:
 
             self._cellDiffyStencil = (
-                self.Pafy.T * self.mesh._cellGradyStencil * self.Pac
+                self.Pafy.T * self.mesh.stencil_cell_gradient_y * self.Pac
             )
         return self._cellDiffyStencil
 
@@ -1856,8 +1856,8 @@ class Sparse(BaseComboRegularization):
         max_h = np.max(np.hstack(mesh.h))
         if mesh.dim > 1:
             objfcts.append(SparseDeriv(mesh=mesh, orientation="y", **kwargs))
-            objfcts[1].ratio = max_h / mesh.hx.min()
-            objfcts[2].ratio = max_h / mesh.hy.min()
+            objfcts[1].ratio = max_h / mesh.h[0].min()
+            objfcts[2].ratio = max_h / mesh.h[1].min()
 
         if mesh.dim > 2:
             objfcts.append(SparseDeriv(mesh=mesh, orientation="z", **kwargs))
@@ -2010,8 +2010,8 @@ def getDiffOpRot(mesh, psi, theta, phi, vec, forward=True):
     assert mesh.dim > 1, "Only for mesh 2D and 3D"
 
     def getCellNeighbors(mesh):
-        Dx = mesh._cellGradxStencil
-        Dy = mesh._cellGradyStencil
+        Dx = mesh.stencil_cell_gradient_x
+        Dy = mesh.stencil_cell_gradient_y
         # Get the current IJ of the stencil derive
         Ix, Jx, _ = sp.sparse.find(Dx)
         Iy, Jy, _ = sp.sparse.find(Dy)
