@@ -28,7 +28,6 @@ import platform
 import multiprocessing
 
 # Required packages
-import SimPEG
 import properties
 import vectormath
 import discretize
@@ -231,7 +230,7 @@ def _get_packages(add_pckg):
     """Create list of packages."""
 
     # Mandatory packages
-    pckgs = [numpy, scipy, SimPEG, properties, vectormath, discretize,
+    pckgs = [numpy, scipy, properties, vectormath, discretize,
              pymatsolver]
 
     # Optional packages
