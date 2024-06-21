@@ -5,9 +5,9 @@
 
 [tool.poetry]
 name = "simpeg_archive"
-version = "0.9.1.dev4+geoapps.0.8.0"
+version = "0.11.0.dev6"
 license = "MIT"
-description = "SimPEG: Simulation and Parameter Estimation in Geophysics"
+description = "Mira fork of SimPEG: Simulation and Parameter Estimation in Geophysics"
 
 authors = ["Rowan Cockett <rowanc1@gmail.com>"]
 repository = "http://github.com/simpeg/simpeg"

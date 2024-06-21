@@ -1,6 +1,6 @@
 from __future__ import print_function
 
-from discretize.utils.interputils import interpmat
+from discretize.utils.interpolation_utils import interpmat
 
 from .matutils import (
     mkvc, sdiag, sdInv, speye, kron3, spzeros, ddx, av,

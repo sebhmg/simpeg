@@ -348,7 +348,7 @@ class ModelIO(properties.HasProperties):
             dy = ly / ny
             print((">> dx:%.1e") % (dy))
         if dz is None:
-            dz = np.median(self.mesh_1d.hx)
+            dz = np.median(self.mesh_1d.h[0])
 
         nx = int(np.floor(lx / dx))
         ny = int(np.floor(ly / dy))
@@ -380,7 +380,7 @@ class ModelIO(properties.HasProperties):
 
         distance, inds = tree_2d.query(xy, k=npts)
         if epsilon is None:
-            epsilon = np.min([self.mesh_3d.hx.min(), self.mesh_3d.hy.min()])
+            epsilon = np.min([self.mesh_3d.h[0].min(), self.mesh_3d.h[1].min()])
 
         w = 1.0 / (distance + epsilon) ** 2
         w = Utils.sdiag(1.0 / np.sum(w, axis=1)) * (w)
