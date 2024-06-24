@@ -48,8 +48,6 @@ include = [
 discretize = ">=0.8.0"
 empymod = ">=2.0.0"
 geoana = "*"
-geoh5py = {version = "~0.9.0", source="pypi", allow-prereleases = true}
-#geoh5py = {url = "http://localhost:8888/geoh5py.tar.gz#sha256="}
 matplotlib = "*"
 numpy = ">=1.20"
 mkl = "~2023.2.0"  # from simpeg
@@ -66,6 +64,13 @@ dask = {version = "*", extras = ["distributed"], optional = true}
 distributed = {version = "*", optional = true}
 fsspec = {version = ">=0.3.3", optional = true}
 zarr = {version = "*", optional = true}
+
+## Pip dependencies from Git repositories
+#----------------------------------------
+#geoh5py = {version = "~0.9.0rc1", source = "pypi", allow-prereleases = true}
+geoh5py = {url = "https://github.com/MiraGeoscience/geoh5py/archive/refs/heads/develop.zip"}
+#geoh5py = {url = "http://localhost:8888/geoh5py.tar.gz#sha256="}
+
 
 [tool.poetry.group.dev.dependencies]
 black = "*"

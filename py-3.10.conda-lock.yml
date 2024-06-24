@@ -17,9 +17,9 @@
 version: 1
 metadata:
   content_hash:
-    win-64: 4153f64e71d721e4615764d9db80cd148c4b0b700eb72f30bad3fdefab692def
-    osx-64: ff7d586096511779e61613fd2c1532aa17ce2542576ebb8f2cbf3fd8a4ec5582
-    linux-64: 850cec62155fea98ec4c866baef488bfcf1f82af0a6ddb3c4ab2700f925f928d
+    win-64: 4a6fc89a581a1cf1c8e6348a17e9e88ce5fb164713c1949cd6f60066747f70c0
+    osx-64: db8847d90e8733308cae50a1254c71f57bc5ed5ebadfee6532ed7582ef8a4279
+    linux-64: 03016d2562099b3d19176bb6d8bfd838ff6d9b55898ecba30837b2cf42897678
   channels:
   - url: conda-forge
     used_env_vars: []
@@ -12398,43 +12398,49 @@ package:
   category: main
   optional: false
 - name: geoh5py
-  version: 0.9.0
+  version: 0.10.0a1
   manager: pip
   platform: linux-64
   dependencies:
-    h5py: '>=3.2.1,<4.0.0'
-    numpy: '>=1.23.5,<1.24.0'
     pillow: '>=10.3.0,<10.4.0'
-  url: https://files.pythonhosted.org/packages/a1/04/2d6d5a8e861987073266373507c267f94033c83afe8df7f18100fc6330d3/geoh5py-0.9.0-py3-none-any.whl
-  hash:
-    sha256: dd2d16a9ed409f4bad13e165d1ad81641e3be941ba35c6c6a66a8ed4950271f7
+    h5py: '>=3.2.1,<4.0.0'
+    numpy: '>=1.23.5,<2.0.0'
+  url: https://github.com/MiraGeoscience/geoh5py/archive/refs/heads/develop.zip
+  hash: {}
   category: main
+  source:
+    type: url
+    url: https://github.com/MiraGeoscience/geoh5py/archive/refs/heads/develop.zip
   optional: false
 - name: geoh5py
-  version: 0.9.0
+  version: 0.10.0a1
   manager: pip
   platform: osx-64
   dependencies:
-    h5py: '>=3.2.1,<4.0.0'
-    numpy: '>=1.23.5,<1.24.0'
     pillow: '>=10.3.0,<10.4.0'
-  url: https://files.pythonhosted.org/packages/a1/04/2d6d5a8e861987073266373507c267f94033c83afe8df7f18100fc6330d3/geoh5py-0.9.0-py3-none-any.whl
-  hash:
-    sha256: dd2d16a9ed409f4bad13e165d1ad81641e3be941ba35c6c6a66a8ed4950271f7
+    h5py: '>=3.2.1,<4.0.0'
+    numpy: '>=1.23.5,<2.0.0'
+  url: https://github.com/MiraGeoscience/geoh5py/archive/refs/heads/develop.zip
+  hash: {}
   category: main
+  source:
+    type: url
+    url: https://github.com/MiraGeoscience/geoh5py/archive/refs/heads/develop.zip
   optional: false
 - name: geoh5py
-  version: 0.9.0
+  version: 0.10.0a1
   manager: pip
   platform: win-64
   dependencies:
-    h5py: '>=3.2.1,<4.0.0'
-    numpy: '>=1.23.5,<1.24.0'
     pillow: '>=10.3.0,<10.4.0'
-  url: https://files.pythonhosted.org/packages/a1/04/2d6d5a8e861987073266373507c267f94033c83afe8df7f18100fc6330d3/geoh5py-0.9.0-py3-none-any.whl
-  hash:
-    sha256: dd2d16a9ed409f4bad13e165d1ad81641e3be941ba35c6c6a66a8ed4950271f7
+    h5py: '>=3.2.1,<4.0.0'
+    numpy: '>=1.23.5,<2.0.0'
+  url: https://github.com/MiraGeoscience/geoh5py/archive/refs/heads/develop.zip
+  hash: {}
   category: main
+  source:
+    type: url
+    url: https://github.com/MiraGeoscience/geoh5py/archive/refs/heads/develop.zip
   optional: false
 - name: h5py
   version: 3.11.0
