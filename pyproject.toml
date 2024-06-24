@@ -48,12 +48,12 @@ include = [
 discretize = ">=0.8.0"
 empymod = ">=2.0.0"
 geoana = "*"
-geoh5py = {version = "*", allow-prereleases = true}
+geoh5py = {version = "~0.9.0", source="pypi", allow-prereleases = true}
 #geoh5py = {url = "http://localhost:8888/geoh5py.tar.gz#sha256="}
 matplotlib = "*"
 numpy = ">=1.20"
-mkl = "~2021.1.0"  # from simpeg
-pydiso = "~0.0.5"  # from simpeg
+mkl = "~2023.2.0"  # from simpeg
+pydiso = "~0.0.4"  # from simpeg
 tbb = "2021.12.0"
 tzdata = "2023.4"  # through pandas from SimPEG
 intel-openmp = "2023.2.0"  # from simpeg
@@ -70,7 +70,7 @@ zarr = {version = "*", optional = true}
 [tool.poetry.group.dev.dependencies]
 black = "*"
 jupyter = "*"
-memory_profiler = "*"
+memory_profiler = {source="pypi", version="*"}
 pillow = "*"
 plotly = "*"
 pre-commit = "*"
