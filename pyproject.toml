@@ -30,10 +30,6 @@ classifiers = [
     "Natural Language :: English",
 ]
 
-packages = [
-    { include = "simpeg" },
-]
-
 exclude = ["tests*", "examples*", "tutorials*"]
 
 include = [
