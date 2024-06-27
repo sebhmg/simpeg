@@ -42,6 +42,8 @@ include = [
 ]
 
 [tool.poetry.dependencies]
+python = "^3.10"
+
 discretize = ">=0.8.0"
 empymod = ">=2.0.0"
 geoana = "*"
